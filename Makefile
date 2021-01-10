@@ -4,4 +4,4 @@ DOCKER ?= docker
 
 
 all:
-	$(DOCKER) build -t emacs-lsp/docs-image .
+	$(DOCKER) build -t emacs-lsp/docs-image/docs-image .
