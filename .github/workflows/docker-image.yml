@@ -24,10 +24,12 @@ jobs:
     needs: tag
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@master
+      - uses: actions/checkout@2.2.0
+        with:
+          fetch-depth: 0
       - name: Get latest tag
         id: latest-tag
-        uses: WyriHaximus/github-action-get-previous-tag@0.1.0
+        uses: WyriHaximus/github-action-get-previous-tag@v1
         env:
           GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
       - name: Buid and publish docker image
