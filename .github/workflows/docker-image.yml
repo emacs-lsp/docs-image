@@ -24,7 +24,7 @@ jobs:
     needs: tag
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@2.2.0
+      - uses: actions/checkout@v2.2.0
         with:
           fetch-depth: 0
       - name: Get latest tag
